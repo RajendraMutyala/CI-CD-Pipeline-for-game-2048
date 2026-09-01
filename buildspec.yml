@@ -7,9 +7,9 @@ phases:
   build:
     commands:
       - echo Building the Docker image...
-      - docker build -t 077207386520.dkr.ecr.us-east-1.amazonaws.com/2048-game-repo:latest .
+      - docker build -t 2048-game .
       - echo Tagging the Docker image...
-      - docker tag 2048-game-repo:latest 077207386520.dkr.ecr.us-east-1.amazonaws.com/2048-game-repo:latest
+      - docker tag 2048-game:latest 077207386520.dkr.ecr.us-east-1.amazonaws.com/2048-game-repo:latest
   post_build:
     commands:
       - echo Pushing the Docker image to Amazon ECR...
